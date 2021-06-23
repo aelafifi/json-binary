@@ -9,7 +9,7 @@ defaults: &defaults
     - image: circleci/node:15.1
 
 jobs:
-  test:
+  build:
     <<: *defaults
     steps:
       - checkout
@@ -22,10 +22,6 @@ jobs:
 
       - node/install-packages
 
-      - run:
-          name: Run tests
-          command: npm test
-
       - save_cache:
           paths:
             - node_modules
@@ -35,25 +31,25 @@ jobs:
           root: ~/repo
           paths:
             - "."
-  
+
   deploy:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/repo
-      
+
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-      
+
       - run:
           name: Publish package
           command: npm publish
 
 workflows:
-  test-deploy:
+  build-deploy:
     jobs:
-      - test:
+      - build:
           filters:
             tags:
               only: /^v.*/
