@@ -22,10 +22,6 @@ jobs:
 
       - node/install-packages
 
-      - run:
-          name: Build TS
-          command: npm run compile
-
       - save_cache:
           paths:
             - node_modules
