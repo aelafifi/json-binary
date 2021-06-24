@@ -78,3 +78,5 @@ console.log(decoded);
     date: 2020-01-02T12:34:56.789Z
 } */
 ```
+
+[More about encoded value](./DOC.md)
