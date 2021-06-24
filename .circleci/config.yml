@@ -64,7 +64,7 @@ workflows:
               only: master
       - deploy:
           requires:
-            - build-master
+            - build
           filters:
             tags:
               only: /^v.*/
