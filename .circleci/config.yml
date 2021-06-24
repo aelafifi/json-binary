@@ -54,9 +54,15 @@ workflows:
           filters:
             tags:
               only: /^v.*/
+      - build-master:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              only: master
       - deploy:
           requires:
-            - build
+            - build-master
           filters:
             tags:
               only: /^v.*/
