@@ -48,12 +48,14 @@ jobs:
           command: npm publish
 
 workflows:
-  build-deploy:
+  build:
     jobs:
       - build:
           filters:
             tags:
               only: /^v.*/
+  build-deploy:
+    jobs:
       - build-master:
           filters:
             tags:
