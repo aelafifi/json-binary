@@ -1,7 +1,6 @@
-import {encoding} from "lib0";
 import {ValueType} from "./ValueType";
 import {debug as createDebug} from "debug";
-import {Encoder} from "./encoding/encoding";
+import {Encoder} from "lib0-encoding";
 
 const debug = createDebug("json-encode");
 

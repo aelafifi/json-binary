@@ -1,7 +1,6 @@
 import {EncoderOpts, JsonEncoder} from "./JsonEncoder";
 import {DecoderOpts, JsonDecoder} from "./JsonDecoder";
-import type {Encoder} from "./encoding/encoding";
-import type {Decoder} from "./encoding/decoding";
+import type {Encoder, Decoder} from "lib0-encoding";
 
 export class Json {
     private jsonEncoder: JsonEncoder;
