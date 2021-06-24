@@ -3,10 +3,10 @@
 JSON from/to Binary encoding/decoding that supports the following data types:
 
 - Constant values:
-    - undefined
-    - null
-    - true
-    - false
+    - `undefined`
+    - `null`
+    - `true`
+    - `false`
 - Numbers:
     - Integers
     - BigInt's
