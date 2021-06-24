@@ -17,6 +17,7 @@
         "importsNotUsedAsValues": "error"
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "./tests/**/*"
     ]
 }
